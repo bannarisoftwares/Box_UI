@@ -17,6 +17,7 @@ class ExampleView extends StatelessWidget {
           ...buttonWidgets,
           ...textWidgets,
           ...inputFields,
+          ...widgets
         ],
       ),
     );
@@ -98,8 +99,10 @@ class ExampleView extends StatelessWidget {
         verticalSpaceSmall,
         BoxInputField(
           controller: TextEditingController(),
-          trailing: Icon(Icons.clear_outlined),
+          trailing: Icon(Icons.search),
           placeholder: 'Search for things',
-        ),
+        )
       ];
+
+  List<Widget> get widgets => [BoxSearch()];
 }
