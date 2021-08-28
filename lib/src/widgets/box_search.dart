@@ -7,21 +7,8 @@ class BoxSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return Container(
-    //     child: TextField(
-    //   decoration: InputDecoration(
-    //       hintText: "Search group",
-    //       hintStyle: TextStyle(fontWeight: FontWeight.w600),
-    //       border: InputBorder.none,
-    //       icon: SvgPicture.asset(
-    //         "lib/assets/icons/search.svg",
-    //         package: "box_ui",
-    //       )),
-    //   onTap: () {},
-    // ));
-
     return Container(
-        margin: EdgeInsets.symmetric(vertical: 30),
+        // margin: EdgeInsets.symmetric(vertical: 30),
         padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
         decoration: BoxDecoration(
             color: Colors.white,
