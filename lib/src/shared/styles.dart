@@ -6,22 +6,23 @@ import 'package:flutter/cupertino.dart';
 // fonts
 const TextStyle heading1Style = TextStyle(
   fontSize: 28,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w600,
 );
 
 const TextStyle heading2Style = TextStyle(
   fontSize: 18,
-  fontWeight: FontWeight.w600,
+  fontWeight: FontWeight.w800,
+  // fontStyle: FontStyle.normal
 );
 
 const TextStyle heading3Style = TextStyle(
-  fontSize: 24,
-  fontWeight: FontWeight.w600,
+  fontSize: 15,
+  fontWeight: FontWeight.w400,
 );
 
 const TextStyle headlineStyle = TextStyle(
-  fontSize: 30,
-  fontWeight: FontWeight.w700,
+  fontSize: 11,
+  fontWeight: FontWeight.w300,
 );
 
 const TextStyle bodyStyle = TextStyle(
