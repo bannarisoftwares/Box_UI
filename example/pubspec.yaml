@@ -49,16 +49,54 @@ flutter:
   fonts:
     - family: Gilroy
       fonts:
+
+        - asset: assets/fonts/Gilroy-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Gilroy-ThinItalic.ttf
+          style: italic
+          weight: 100
+
+        - asset: assets/fonts/Gilroy-UltraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Gilroy-UltraLightItalic.ttf
+          style: italic
+          weight: 200
+
         - asset: assets/fonts/Gilroy-Light.ttf
           weight: 300
+        - asset: assets/fonts/Gilroy-LightItalic.ttf
+          style: italic
+          weight: 300
+
         - asset: assets/fonts/Gilroy-Regular.ttf
           weight: 400
+        - asset: assets/fonts/Gilroy-RegularItalic.ttf
+          style: italic
+          weight: 400
+
         - asset: assets/fonts/Gilroy-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Gilroy-SemiBold.ttf
-          weight: 600
+        - asset: assets/fonts/Gilroy-MediumItalic.ttf
+          style: italic
+          weight: 500
+
         - asset: assets/fonts/Gilroy-Bold.ttf
-          weight: 700 
+          weight: 600
+        - asset: assets/fonts/Gilroy-BoldItalic.ttf
+          style: italic
+          weight: 600
+
+        - asset: assets/fonts/Gilroy-ExtraBold.ttf
+          weight: 700
+        - asset: assets/fonts/Gilroy-ExtraBoldItalic.ttf
+          style: italic
+          weight: 700
+
+        - asset: assets/fonts/Gilroy-Heavy.ttf
+          weight: 800
+        - asset: assets/fonts/Gilroy-HeavyItalic.ttf
+          style: italic
+          weight: 800
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

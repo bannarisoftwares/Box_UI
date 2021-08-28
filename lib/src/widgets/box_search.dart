@@ -17,6 +17,7 @@ class BoxSearch extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: kcBorderColor, width: 1)),
         child: TextField(
+          // style: TextStyle(fontFamily: FontStyle.),
           decoration: InputDecoration(
             hintText: "Search Groups",
             hintStyle: heading2Style,
