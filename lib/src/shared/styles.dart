@@ -11,7 +11,7 @@ const TextStyle heading1Style = TextStyle(
 
 const TextStyle heading2Style = TextStyle(
   fontSize: 18,
-  fontWeight: FontWeight.w800,
+  fontWeight: FontWeight.w500,
   // fontStyle: FontStyle.normal
 );
 
