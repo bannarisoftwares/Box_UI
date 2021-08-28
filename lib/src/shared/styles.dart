@@ -5,12 +5,12 @@ import 'package:flutter/cupertino.dart';
 // To make it clear which weight we are using, we'll define the weight even for regular
 // fonts
 const TextStyle heading1Style = TextStyle(
-  fontSize: 34,
+  fontSize: 28,
   fontWeight: FontWeight.w400,
 );
 
 const TextStyle heading2Style = TextStyle(
-  fontSize: 28,
+  fontSize: 18,
   fontWeight: FontWeight.w600,
 );
 

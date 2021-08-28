@@ -1,3 +1,5 @@
+import 'package:box_ui/box_ui.dart';
+import 'package:box_ui/src/shared/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,11 +15,11 @@ class BoxSearch extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.red, width: 2)),
+            border: Border.all(color: kcBorderColor, width: 1)),
         child: TextField(
           decoration: InputDecoration(
-            hintText: "Search group",
-            hintStyle: TextStyle(fontWeight: FontWeight.w600),
+            hintText: "Search Groups",
+            hintStyle: heading2Style,
             border: InputBorder.none,
             icon: SvgPicture.asset(
               "lib/assets/icons/search.svg",
