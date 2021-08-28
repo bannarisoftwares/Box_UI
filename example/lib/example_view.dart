@@ -104,5 +104,8 @@ class ExampleView extends StatelessWidget {
         )
       ];
 
-  List<Widget> get widgets => [BoxSearch()];
+  List<Widget> get widgets => [
+    verticalSpaceMedium,
+    BoxSearch(),
+    verticalSpaceMedium];
 }
