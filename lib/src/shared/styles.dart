@@ -6,22 +6,21 @@ import '../../box_ui.dart';
 
 // To make it clear which weight we are using, we'll define the weight even for regular
 // fonts
-const TextStyle heading1Style = TextStyle(
-  fontSize: 28,
-  fontWeight: FontWeight.w700,
-);
+const TextStyle heading1Style =
+    TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: kcPrimaryColor);
 
-const TextStyle heading2Style = TextStyle(
-  fontSize: 18,
-  fontWeight: FontWeight.w500,
-  color: kcPrimaryColor
-  // fontStyle: FontStyle.normal
-);
+const TextStyle heading2Style =
+    TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: kcPrimaryColor);
 
-const TextStyle heading3Style = TextStyle(
-  fontSize: 15,
-  fontWeight: FontWeight.w400,
-);
+const TextStyle heading3Style =
+    TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: kcPrimaryColor);
+
+const TextStyle body1Style =
+    TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: kcPrimaryColor);
+const TextStyle body2Style =
+    TextStyle(fontSize: 12, fontWeight: FontWeight.w300, color: kcPrimaryColor);
+const TextStyle body3Style =
+    TextStyle(fontSize: 10, fontWeight: FontWeight.w300, color: kcPrimaryColor);
 
 const TextStyle headlineStyle = TextStyle(
   fontSize: 11,

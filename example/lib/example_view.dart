@@ -24,7 +24,7 @@ class ExampleView extends StatelessWidget {
   }
 
   List<Widget> get textWidgets => [
-        BoxText.headline('Text Styles'),
+        // BoxText.headline('Text Styles'),
         verticalSpaceMedium,
         BoxText.headingOne('Heading One'),
         verticalSpaceMedium,
@@ -32,40 +32,38 @@ class ExampleView extends StatelessWidget {
         verticalSpaceMedium,
         BoxText.headingThree('Heading Three'),
         verticalSpaceMedium,
-        BoxText.headline('Headline'),
+        BoxText.bodyOne('Body one, Body Text that will be used for the general body'),
         verticalSpaceMedium,
-        BoxText.subheading('This will be a sub heading to the headling'),
+        BoxText.bodyTwo('Body two, Body Text that will be used for the general body'),
         verticalSpaceMedium,
-        BoxText.body('Body Text that will be used for the general body'),
-        verticalSpaceMedium,
-        BoxText.caption('This will be the caption usually for smaller details'),
+        BoxText.bodyThree('Body three, Body Text that will be used for the general body'),
         verticalSpaceMedium,
       ];
 
   List<Widget> get buttonWidgets => [
-        BoxText.headline('Buttons'),
+        BoxText.headingTwo('Buttons'),
         verticalSpaceMedium,
-        BoxText.body('Normal'),
+        BoxText.bodyTwo('Normal'),
         verticalSpaceSmall,
         BoxButton(
           title: 'SIGN IN',
         ),
         verticalSpaceSmall,
-        BoxText.body('Disabled'),
+        BoxText.bodyTwo('Disabled'),
         verticalSpaceSmall,
         BoxButton(
           title: 'SIGN IN',
           disabled: true,
         ),
         verticalSpaceSmall,
-        BoxText.body('Busy'),
+        BoxText.bodyTwo('Busy'),
         verticalSpaceSmall,
         BoxButton(
           title: 'SIGN IN',
           busy: true,
         ),
         verticalSpaceSmall,
-        BoxText.body('Outline'),
+        BoxText.bodyTwo('Outline'),
         verticalSpaceSmall,
         BoxButton.outline(
           title: 'Select location',
@@ -78,16 +76,16 @@ class ExampleView extends StatelessWidget {
       ];
 
   List<Widget> get inputFields => [
-        BoxText.headline('Input Field'),
+        BoxText.headingOne('Input Field'),
         verticalSpaceSmall,
-        BoxText.body('Normal'),
+        BoxText.bodyTwo('Normal'),
         verticalSpaceSmall,
         BoxInputField(
           controller: TextEditingController(),
           placeholder: 'Enter Password',
         ),
         verticalSpaceSmall,
-        BoxText.body('Leading Icon'),
+        BoxText.bodyTwo('Leading Icon'),
         verticalSpaceSmall,
         BoxInputField(
           controller: TextEditingController(),
@@ -95,7 +93,7 @@ class ExampleView extends StatelessWidget {
           placeholder: 'Enter TV Code',
         ),
         verticalSpaceSmall,
-        BoxText.body('Trailing Icon'),
+        BoxText.bodyTwo('Trailing Icon'),
         verticalSpaceSmall,
         BoxInputField(
           controller: TextEditingController(),

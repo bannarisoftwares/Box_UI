@@ -21,8 +21,8 @@ class AutoCompleteListItem extends StatelessWidget {
             color: kcMediumGreyColor,
           ),
           onTap: () => onTap(),
-          title: BoxText.subheading(city),
-          subtitle: BoxText.caption(state),
+          title: BoxText.bodyOne(city),
+          subtitle: BoxText.bodyTwo(state),
         ),
         Divider(
           indent: 50,
