@@ -7,6 +7,7 @@ class ExampleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
         children: [
@@ -32,11 +33,14 @@ class ExampleView extends StatelessWidget {
         verticalSpaceMedium,
         BoxText.headingThree('Heading Three'),
         verticalSpaceMedium,
-        BoxText.bodyOne('Body one, Body Text that will be used for the general body'),
+        BoxText.bodyOne(
+            'Body one, Body Text that will be used for the general body'),
         verticalSpaceMedium,
-        BoxText.bodyTwo('Body two, Body Text that will be used for the general body'),
+        BoxText.bodyTwo(
+            'Body two, Body Text that will be used for the general body'),
         verticalSpaceMedium,
-        BoxText.bodyThree('Body three, Body Text that will be used for the general body'),
+        BoxText.bodyThree(
+            'Body three, Body Text that will be used for the general body'),
         verticalSpaceMedium,
       ];
 
@@ -102,8 +106,6 @@ class ExampleView extends StatelessWidget {
         )
       ];
 
-  List<Widget> get widgets => [
-    verticalSpaceMedium,
-    BoxSearch(),
-    verticalSpaceMedium];
+  List<Widget> get widgets =>
+      [verticalSpaceMedium, BoxInput(), verticalSpaceMedium, BoxSearch()];
 }
