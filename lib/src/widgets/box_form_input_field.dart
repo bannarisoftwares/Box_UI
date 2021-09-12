@@ -2,7 +2,6 @@ import 'package:box_ui/box_ui.dart';
 import 'package:box_ui/src/shared/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class BoxInput extends StatelessWidget {
   final String hintText;

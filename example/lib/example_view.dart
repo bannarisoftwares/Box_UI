@@ -2,7 +2,9 @@ import 'package:box_ui/box_ui.dart';
 import 'package:flutter/material.dart';
 
 class ExampleView extends StatelessWidget {
-  const ExampleView({Key? key}) : super(key: key);
+  var controller = BoxDashInputController();
+
+  ExampleView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +53,9 @@ class ExampleView extends StatelessWidget {
         verticalSpaceSmall,
         BoxButton(
           title: 'SIGN IN',
+          onTap: () {
+            controller.setHintIcon();
+          },
         ),
         verticalSpaceSmall,
         BoxText.bodyTwo('Disabled'),
@@ -106,6 +111,14 @@ class ExampleView extends StatelessWidget {
         )
       ];
 
-  List<Widget> get widgets =>
-      [verticalSpaceMedium, BoxInput(), verticalSpaceMedium, BoxSearch()];
+  List<Widget> get widgets => [
+        verticalSpaceMedium,
+        BoxInput(),
+        Space.vertical(20),
+        BoxSearch(),
+        Space.vertical(20),
+        BoxDashInput(
+          controller: controller,
+        )
+      ];
 }
