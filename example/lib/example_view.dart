@@ -119,6 +119,8 @@ class ExampleView extends StatelessWidget {
         Space.vertical(20),
         BoxDashInput(
           controller: controller,
-        )
+        ),
+        Space.vertical(20),
+        BoxFieldDropDown()
       ];
 }
