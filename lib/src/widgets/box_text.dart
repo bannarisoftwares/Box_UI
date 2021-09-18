@@ -70,7 +70,9 @@ class BoxText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: style,
+      style: style.copyWith(
+        color: this.color,
+      ),
       textAlign: alignment,
     );
   }
