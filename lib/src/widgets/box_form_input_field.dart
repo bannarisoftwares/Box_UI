@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 class BoxInput extends StatelessWidget {
   final String hintText;
   final double verticalPadding;
+  final double verticalMargin;
   final double horizontalPadding;
+  final double horizontalMargin;
   final double borderWidth;
   final double borderRadius;
 
@@ -17,13 +19,16 @@ class BoxInput extends StatelessWidget {
       this.verticalPadding = 5,
       this.horizontalPadding = 15,
       this.borderWidth = 1,
+      this.horizontalMargin = 0,
+      this.verticalMargin = 0,
       this.borderRadius = 10})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        // margin: EdgeInsets.symmetric(vertical: 30),
+        margin: EdgeInsets.symmetric(
+            vertical: verticalMargin, horizontal: horizontalMargin),
         padding: EdgeInsets.symmetric(
             vertical: verticalPadding, horizontal: horizontalPadding),
         decoration: BoxDecoration(
