@@ -9,6 +9,7 @@ class BoxDashInputController {
 
 class BoxDashInput extends StatefulWidget {
   final String hintText;
+  final String? errorText;
   final double verticalPadding;
   final double horizontalPadding;
   final double borderWidth;
@@ -27,18 +28,21 @@ class BoxDashInput extends StatefulWidget {
       this.borderRadius = 10,
       this.minLine = 1,
       this.maxLine = 5,
+        this.errorText,
       required this.controller})
       : super(key: key);
 
   @override
-  _BoxDashInputState createState() => _BoxDashInputState(controller);
+  _BoxDashInputState createState() => _BoxDashInputState(controller,errorText);
 }
 
 class _BoxDashInputState extends State<BoxDashInput> {
   Icon hintPreFixIcon = Icon(Icons.edit);
+  String? errorText;
 
-  _BoxDashInputState(BoxDashInputController controller) {
+  _BoxDashInputState(BoxDashInputController controller,String? errorText) {
     controller.setHintIcon = setHintIcon;
+    this.errorText=errorText;
   }
 
   void setHintIcon() {
@@ -63,6 +67,7 @@ class _BoxDashInputState extends State<BoxDashInput> {
         minLines: widget.minLine,
         maxLines: widget.maxLine,
         decoration: InputDecoration(
+          errorText: errorText,
           suffixIcon: hintPreFixIcon,
           hintText: widget.hintText,
           hintStyle: bodyStyle,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class BoxInputField extends StatelessWidget {
   final TextEditingController controller;
   final String placeholder;
+  final String? errorText;
   final Widget? leading;
   final Widget? trailing;
   final bool password;
@@ -21,6 +22,7 @@ class BoxInputField extends StatelessWidget {
     this.trailing,
     this.trailingTapped,
     this.password = false,
+    this.errorText
   }) : super(key: key);
 
   @override
@@ -35,6 +37,7 @@ class BoxInputField extends StatelessWidget {
         style: TextStyle(height: 1),
         obscureText: password,
         decoration: InputDecoration(
+          errorText: errorText,
           hintText: placeholder,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
