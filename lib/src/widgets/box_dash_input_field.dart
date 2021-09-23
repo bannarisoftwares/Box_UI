@@ -17,8 +17,8 @@ class BoxDashInput extends StatefulWidget {
   final int minLine;
   final int maxLine;
   final BoxDashInputController controller;
+  final Function? onChanged;
 
-  // const BoxInput({Key? key, this.hintText = "Search"}) : super(key: key);
   const BoxDashInput(
       {Key? key,
       this.hintText = "This is dashed input",
@@ -28,21 +28,22 @@ class BoxDashInput extends StatefulWidget {
       this.borderRadius = 10,
       this.minLine = 1,
       this.maxLine = 5,
-        this.errorText,
-      required this.controller})
+      this.errorText,
+      required this.controller,
+     this.onChanged})
       : super(key: key);
 
   @override
-  _BoxDashInputState createState() => _BoxDashInputState(controller,errorText);
+  _BoxDashInputState createState() => _BoxDashInputState();
 }
 
 class _BoxDashInputState extends State<BoxDashInput> {
   Icon hintPreFixIcon = Icon(Icons.edit);
   String? errorText;
+  Function? function;
 
-  _BoxDashInputState(BoxDashInputController controller,String? errorText) {
-    controller.setHintIcon = setHintIcon;
-    this.errorText=errorText;
+  _BoxDashInputState() {
+    this.errorText = errorText;
   }
 
   void setHintIcon() {
@@ -53,6 +54,7 @@ class _BoxDashInputState extends State<BoxDashInput> {
 
   @override
   Widget build(BuildContext context) {
+    widget.controller.setHintIcon = setHintIcon;
     return Container(
         child: DottedBorder(
       padding: EdgeInsets.symmetric(
@@ -63,11 +65,15 @@ class _BoxDashInputState extends State<BoxDashInput> {
       radius: Radius.circular(widget.borderRadius),
       strokeWidth: 1,
       child: TextField(
+        onChanged: (x) {
+          widget.onChanged!(x);
+        },
         keyboardType: TextInputType.multiline,
+        // onChanged: function,
         minLines: widget.minLine,
         maxLines: widget.maxLine,
         decoration: InputDecoration(
-          errorText: errorText,
+          errorText: widget.errorText,
           suffixIcon: hintPreFixIcon,
           hintText: widget.hintText,
           hintStyle: bodyStyle,

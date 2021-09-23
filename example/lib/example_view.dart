@@ -120,6 +120,7 @@ class ExampleView extends StatelessWidget {
         BoxDashInput(
           controller: controller,
           errorText: "This is error",
+          onChanged: (String x) {},
         ),
         Space.vertical(20),
         BoxFieldDropDown()
