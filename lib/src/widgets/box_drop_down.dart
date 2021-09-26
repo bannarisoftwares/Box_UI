@@ -24,12 +24,16 @@ class BoxFieldDropDown extends StatefulWidget {
   final double borderRadius;
   final String? hint;
   final List<BoxFieldDropDownValues> values;
+  final Function? onChanged;
+  final String? errorText;
 
   BoxFieldDropDown(
       {Key? key,
       this.borderWidth = 1,
       this.borderRadius = 10,
       required this.values,
+      this.onChanged,
+      this.errorText,
       this.hint = "Select item"})
       : super(key: key);
 
@@ -49,7 +53,8 @@ class _BoxFieldDropDownState extends State<BoxFieldDropDown> {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
-      items: widget.values.map<DropdownMenuItem<String>>((BoxFieldDropDownValues value) {
+      items: widget.values
+          .map<DropdownMenuItem<String>>((BoxFieldDropDownValues value) {
         return DropdownMenuItem<String>(
           value: value.value,
           child: Text(value.value),
@@ -60,8 +65,10 @@ class _BoxFieldDropDownState extends State<BoxFieldDropDown> {
         setState(() {
           _value = value;
         });
+        widget.onChanged!(value);
       },
       decoration: new InputDecoration(
+        errorText: widget.errorText,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
           borderSide: BorderSide(color: kcBorderColor, width: borderWidth),

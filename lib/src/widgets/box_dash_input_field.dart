@@ -69,7 +69,6 @@ class _BoxDashInputState extends State<BoxDashInput> {
           widget.onChanged!(x);
         },
         keyboardType: TextInputType.multiline,
-        // onChanged: function,
         minLines: widget.minLine,
         maxLines: widget.maxLine,
         decoration: InputDecoration(
