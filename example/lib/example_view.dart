@@ -123,6 +123,12 @@ class ExampleView extends StatelessWidget {
           onChanged: (String x) {},
         ),
         Space.vertical(20),
-        BoxFieldDropDown()
+        BoxFieldDropDown(
+          values: [
+            BoxFieldDropDownValues("key1", "value1"),
+            BoxFieldDropDownValues("key2", "value2"),
+            BoxFieldDropDownValues("key3", "value3")
+          ],
+        )
       ];
 }

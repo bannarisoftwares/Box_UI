@@ -1,11 +1,36 @@
 import 'package:box_ui/box_ui.dart';
 import 'package:flutter/material.dart';
 
+class BoxFieldDropDownValues {
+  final String key;
+  final String value;
+
+  BoxFieldDropDownValues(this.key, this.value);
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BoxFieldDropDownValues &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          value == other.value;
+
+  @override
+  int get hashCode => key.hashCode ^ value.hashCode;
+}
+
 class BoxFieldDropDown extends StatefulWidget {
   final double borderWidth;
   final double borderRadius;
+  final String? hint;
+  final List<BoxFieldDropDownValues> values;
 
-  BoxFieldDropDown({Key? key, this.borderWidth = 1, this.borderRadius = 10})
+  BoxFieldDropDown(
+      {Key? key,
+      this.borderWidth = 1,
+      this.borderRadius = 10,
+      required this.values,
+      this.hint = "Select item"})
       : super(key: key);
 
   @override
@@ -24,20 +49,13 @@ class _BoxFieldDropDownState extends State<BoxFieldDropDown> {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
-      items: [
-        DropdownMenuItem<String>(
-          child: Text('Item 1'),
-          value: 'one',
-        ),
-        DropdownMenuItem<String>(
-          child: Text('Item 2'),
-          value: 'two',
-        ),
-        DropdownMenuItem<String>(
-          child: Text('Item 3'),
-          value: 'three',
-        ),
-      ],
+      items: widget.values.map<DropdownMenuItem<String>>((BoxFieldDropDownValues value) {
+        return DropdownMenuItem<String>(
+          value: value.value,
+          child: Text(value.value),
+        );
+      }).toList(),
+
       onChanged: (String? value) {
         setState(() {
           _value = value;
@@ -53,7 +71,7 @@ class _BoxFieldDropDownState extends State<BoxFieldDropDown> {
         ),
       ),
 
-      hint: Text('Select Item'),
+      hint: widget.hint!.length != 0 ? Text(widget.hint ?? "") : null,
       value: _value,
       // decoration: ,
     );
