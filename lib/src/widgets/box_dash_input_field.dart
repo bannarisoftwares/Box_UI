@@ -30,7 +30,7 @@ class BoxDashInput extends StatefulWidget {
       this.maxLine = 5,
       this.errorText,
       required this.controller,
-     this.onChanged})
+      this.onChanged})
       : super(key: key);
 
   @override
