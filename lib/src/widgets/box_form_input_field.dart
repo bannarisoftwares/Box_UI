@@ -13,6 +13,7 @@ class BoxInput extends StatefulWidget {
   final double borderWidth;
   final double borderRadius;
   final Function? onChanged;
+  final String? errorText;
 
   const BoxInput(
       {Key? key,
@@ -24,6 +25,7 @@ class BoxInput extends StatefulWidget {
       this.verticalMargin = 0,
       this.onChanged,
       this.initialText,
+        this.errorText,
       this.borderRadius = 10})
       : super(key: key);
 
@@ -51,6 +53,7 @@ class _BoxInputState extends State<BoxInput> {
             widget.onChanged!(value);
           },
           decoration: InputDecoration(
+            errorText: widget.errorText,
             hintText: widget.hintText,
             hintStyle: bodyStyle,
             border: InputBorder.none,
